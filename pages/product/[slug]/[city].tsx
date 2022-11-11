@@ -5,7 +5,9 @@ import ProductDisplay from '../../../components/ProductPage';
 
 export default function ProductPage() {
   const router = useRouter()
-  const { slug, city } = router.query
+  const { asPath } = router
+
+  const [,,slug] = asPath ? (asPath as string).split('/') : []
 
   const cookies = typeof document !== 'undefined' ? cookie.parse(document.cookie) : {};
 

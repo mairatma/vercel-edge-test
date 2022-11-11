@@ -13,7 +13,7 @@ const ProductDisplay: React.FC<Props> = ({ slug, city }) => {
   return (
     <div>
       <h3>Product {slug}</h3>
-      <p>Price: {CITY_PRICE_MAP[city ?? 'unknown']}</p>
+      <p>Price: R${CITY_PRICE_MAP[city ?? 'unknown']},00</p>
     </div>
   );
 }
